@@ -15,16 +15,19 @@ console.log(num1 - num2);
 console.log(num1 * num2);
 console.log(num1 / num2);
 
-let answer = prompt("Please enter the price tag for bananas?");
+let answer = prompt("Please enter the price tag for bananas");
+
 console.log(answer);
 
-let price = parseInt(answer);
+let price = answer.replace("$", "");
+
+const newPrice = parseFloat(price);
 
 let percentage = 0.9;
 
-let totalValue =  (price * percentage);
+let totalValue = (newPrice * percentage);
 
-console.log(`Your new price after the discount is $${totalValue}.`);
+console.log(`Your new price after the discount is $${totalValue.toFixed(2)}.`);
 
 
 
