@@ -34,6 +34,28 @@ let totalValue = (newPrice * percentage);
 console.log(`Your new price after the discount is $${totalValue.toFixed(2)}.`);
 */
 
+/* Assignment 3 */
+
+function isValidPassword (username, password) {
+    if(!(username.length >= 8)) {
+        return false;
+    }
+    if (username.indexOf(" ") !== -1) {
+        return false;
+    }
+    if(!(password.length >= 8)) {
+        return false;
+    }
+    if (password.indexOf(" ") !== -1) {
+        return false;
+    }
+    if (password == username) {
+        return false;
+    }
+    return true;
+}
+
+console.log(isValidPassword("janedoe1", "bungyjump"));
 
 /* Assignment 3 version 1 
 
@@ -65,7 +87,7 @@ console.log(isValidUsername("hellohello"));
 console.log(isValidPassword("hellohello"));
 */
 
-/* Assignment 3 version 2 */ 
+/* Assignment 3 version 2 
 
 function isValidPassword () {
 
@@ -96,7 +118,7 @@ function isValidPassword () {
 }
 
 console.log(isValidPassword(""));
-
+*/ 
 
 /* Another version of assignment 3
 function checkPswd() {
