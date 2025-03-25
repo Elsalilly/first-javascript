@@ -35,7 +35,7 @@ console.log(`Your new price after the discount is $${totalValue.toFixed(2)}.`);
 */
 
 
-/* Assignment 3 */
+/* Assignment 3 version 1 
 
 
 function isValidUsername (username) {
@@ -63,19 +63,55 @@ function isValidPassword (password) {
 
 console.log(isValidUsername("hellohello"));
 console.log(isValidPassword("hellohello"));
+*/
 
+/* Assignment 3 version 2 */ 
 
-/*
-    if(!(password.length >= 8)) {
+function isValidPassword () {
+
+    let userID = "janedoe";
+    let confirmPassword = "bungyjump";
+
+    const username = prompt("Please enter your username");
+    const userPswd = prompt("Please enter your password");
+
+    if(!(userPswd.length >= 8)) {
         return false;
+    }
+
+    if (userPswd.indexOf(" ") !== -1) {
+        return false;
+    }
+    if (userPswd !== confirmPassword) {
+        return false;
+    }
+    if (userID !== username) {
+        return false;
+    }
+    if (userPswd == username) {
+        return false;
+    } else {
+        return true;
     }
 }
 
-    return password.includes ("hellohello") ? true : false;
-const password1 = "helloeverybody";
-if (isValidPassword(password1)) {
-    console.log(`${password1} - Valid Password!`);
-} else {
-    console.log(`${password1} - Invalid Password!`);
+console.log(isValidPassword(""));
+
+
+/* Another version of assignment 3
+function checkPswd() {
+    let userID = "janedoe";
+    let confirmPassword = "bungyjump";
+
+    let confirmID = document.querySelector(".id").value;
+    let password = document.querySelector(".pw").value;
+
+    if (password == confirmPassword && confirmID == userID) {
+        document.querySelector("form").action ="index.html";
+        
+        console.log(password)
+    } else {
+        alert("please enter correct username/password");
+    }
 }
 */
